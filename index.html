@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script src="script.js" defer></script>
-	<link rel="stylesheet" href="styles.css">
-	<title>Password Generator</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
 </head>
-
 <body>
-	<div class="container">
+
+    <div class="container">
 		<h1 class="title">Password Generator</h1>
 		<h3 class="password-display" id="passwordDisplay">password</h3>
 	<button class='btn' id='copy-btn' style='margin-bottom: 20px;'>Copy to Clipboard</button>
+    <div class="popup" id="dialog">Copied</div>
+
 		<form id="passwordGeneratorForm" class="form">
 			<label for="characterAmountNumber">Number Of Characters</label>
 			<div class="character-amount-container">
 				<input type="range" min="1" max="50" value="10" id="characterAmountRange">
 				<input class="number-input" type="number" min="1" max="50" value="10" id="characterAmountNumber">
-      </div>
+            </div>
 
 				<label for="includeUppercase">Include Uppercase</label>
 				<input type="checkbox" id="includeUppercase">
@@ -34,6 +35,13 @@
 				<button type="submit" class="btn">Generate Password</button>
 		</form>
 	</div>
-</body>
 
+    
+    <h1>Password Strength</h1>
+    <div class="strength-meter" id="strength-meter"></div>
+    <input class="password-input" id="password-input" value="password" type="text" autofocus aria-laballedby="password">
+    <div id="reasons" class="reasons"></div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
 </html>

@@ -1,0 +1,141 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #a1a7c8;
+    /* background-image: linear-gradient(to right top, #5987cc, #566bb0, #534f93, #4d3475, #451856); */
+    margin: 0;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .container {
+    background-color: #6b9fed;
+    padding: 3rem;
+    border-radius: 3rem;
+    border: 2px solid rgb(190, 190, 190);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .form {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 1rem;
+    column-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title {
+    margin: 0;
+    text-align: center;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  .character-amount-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .number-input {
+    width: 2rem;
+  }
+  
+  .password-display {
+    background-color: #24f9f9;
+    color: #1a1717;
+    padding: 1rem;
+    border: 1px solid #333;
+    height: 2rem;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+    border-radius: .5rem;
+  }
+  
+  .btn {
+    grid-column: span 2;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 1rem;
+  }
+  
+  .btn:hover {
+    background-color: #FFFFFF33;
+  }
+  
+  #copy-btn{
+    margin-bottom: 1.5em;
+
+  }
+
+  .popup{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: none;
+      margin: .1em;
+      width: 6em;
+      height: 2em;
+      border: 2px solid black;
+      border-radius: 2em;
+      text-align: center;
+  }
+  
+  /* Password Strength */
+  .strength-meter {
+    position: relative;
+    height: 2rem;
+    width: 30%;
+    border: 3px solid hsl(261, 88%, 57%);
+    border-radius: 1rem;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .strength-meter::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: calc(1% * var(--strength, 0));
+    background-color: hsl(261, 88%, 67%);
+
+    transition: width 200ms;
+  }
+
+  .password-input {
+    margin-top: 1rem;
+    width: 30%;
+    padding: .25rem .75rem;
+    background-color: hsl(261, 88%, 25%);
+    color: white;
+    border: 1px solid hsl(261, 88%, 57%);
+    outline: none;
+    text-align: center;
+    border-radius: .3rem;
+  }
+
+  .password-input:focus {
+    border-color: hsl(261, 88%, 70%);
+  }
+
+  .reasons > * {
+    margin-top: .5rem;
+    color: hsl(261, 65%, 40%);
+  }
