@@ -2,4 +2,4 @@
 
 Password generator with javascript.
 
-Live preview : https://codepen.io/Yisemiramis/full/NWaLBOX?editors=0010
+Live preview : https://pwdgencheck.netlify.app 
